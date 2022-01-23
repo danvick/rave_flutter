@@ -11,21 +11,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^0.18.1
+  flutter_svg: ^1.0.3
   http: ^0.13.4
   intl: ^0.17.0
   meta: ^1.1.8
-  async: ^2.4.2
+  async: ^2.8.2  
   dio: ^4.0.4
   get_it: ^7.2.0
   equatable: ^2.0.3
   tripledes: ^2.1.0
-  webview_flutter: ^0.3.22+1
+  webview_flutter: ^3.0.0 
 
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  # flutter_test:
+    # sdk: flutter
 
 flutter:
   plugin:
