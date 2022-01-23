@@ -16,9 +16,9 @@ dependencies:
   intl: ^0.17.0
   meta: ^1.1.8
   async: ^2.4.2
-  dio: ^3.0.10
-  get_it: ^4.0.4
-  equatable: ^1.2.4
+  dio: ^4.0.4
+  get_it: ^7.2.0
+  equatable: ^2.0.3
   tripledes: ^2.1.0
   webview_flutter: ^0.3.22+1
 
