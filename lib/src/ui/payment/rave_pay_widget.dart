@@ -84,7 +84,7 @@ class _RavePayWidgetState extends BaseState<RavePayWidget>
         duration: Duration(milliseconds: 400),
         curve: Curves.fastOutSlowIn,
         alignment: Alignment.topCenter,
-        vsync: this,
+        // vsync: this,
         child: StreamBuilder<TransactionState>(
           stream: TransactionBloc.instance!.stream,
           builder: (_, snapshot) {
@@ -127,7 +127,7 @@ class _RavePayWidgetState extends BaseState<RavePayWidget>
       },
     );
     child = AnimatedSize(
-      vsync: this,
+      // vsync: this,
       duration: Duration(milliseconds: 400),
       curve: Curves.linear,
       child: FadeTransition(
@@ -236,7 +236,7 @@ class _RavePayWidgetState extends BaseState<RavePayWidget>
                           ? rightWidget ?? rightText
                           : rightText,
                     ),
-                    vsync: this,
+                    // vsync: this,
                     duration: Duration(milliseconds: 800)),
               ],
             ),

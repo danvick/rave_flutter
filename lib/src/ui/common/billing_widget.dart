@@ -13,7 +13,7 @@ class BillingWidget extends StatefulWidget {
 
 class _BillingWidgetState extends State<BillingWidget> {
   var _formKey = GlobalKey<FormState>();
-  var _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.disabled;
   String? address;
   String? city;
   String? state;
@@ -26,7 +26,7 @@ class _BillingWidgetState extends State<BillingWidget> {
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       child: Form(
         key: _formKey,
-        autovalidateMode: AutovalidateMode.disabled,
+        autovalidateMode: _autoValidate,
         child: Column(
           children: <Widget>[
             Text(
@@ -105,7 +105,7 @@ class _BillingWidgetState extends State<BillingWidget> {
       });
     } else {
       setState(() {
-        _autoValidate = true;
+        _autoValidate = AutovalidateMode.always;
       });
     }
   }

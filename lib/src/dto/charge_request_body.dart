@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:rave_flutter/src/common/rave_utils.dart';
 import 'package:rave_flutter/src/dto/payload.dart';
 import 'package:rave_flutter/src/repository/repository.dart';
