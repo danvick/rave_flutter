@@ -15,7 +15,7 @@ class OtpWidget extends StatefulWidget {
 
 class _OtpWidgetState extends State<OtpWidget> {
   var _formKey = GlobalKey<FormState>();
-  var _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.disabled;
   String? _otp;
   var heightBox = SizedBox(height: 20.0);
 
@@ -25,7 +25,7 @@ class _OtpWidgetState extends State<OtpWidget> {
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       child: Form(
         key: _formKey,
-        autovalidate: _autoValidate,
+        autovalidateMode: _autoValidate,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,7 +52,7 @@ class _OtpWidgetState extends State<OtpWidget> {
               ),
               autoFocus: true,
               inputFormatters: [
-                WhitelistingTextInputFormatter.digitsOnly,
+                FilteringTextInputFormatter.digitsOnly,
               ],
               obscureText: true,
               hintText: "OTP",
@@ -94,7 +94,7 @@ class _OtpWidgetState extends State<OtpWidget> {
       widget.onPinInputted!(_otp);
     } else {
       setState(() {
-        _autoValidate = true;
+        _autoValidate = AutovalidateMode.always;
       });
     }
   }
